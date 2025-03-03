@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mystery Textbox</title>
+    <style>
+        body {
+            background: url('https://i.imgur.com/U6WeR3u.png') no-repeat center center/cover;
+            font-family: 'Courier New', monospace;
+            text-align: center;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container {
+            cursor: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2048%2048'%20shape-rendering='crispEdges'%3E%3Cg%20transform='scale(2)'%3E%3C!--%20Eraser%20(Top%204%20rows)%20--%3E%0A%20%20%3Crect%20x='22'%20y='0'%20width='1'%20height='1'%20fill='%23FFCDD2'/%3E%0A%20%20%3Crect%20x='23'%20y='0'%20width='1'%20height='1'%20fill='%23FFCDD2'/%3E%0A%20%20%3Crect%20x='21'%20y='1'%20width='1'%20height='1'%20fill='%23FFCDD2'/%3E%0A%20%20%3Crect%20x='22'%20y='1'%20width='1'%20height='1'%20fill='%23FFCDD2'/%3E%0A%20%20%3Crect%20x='23'%20y='1'%20width='1'%20height='1'%20fill='%23FFCDD2'/%3E%0A%20%20%3Crect%20x='20'%20y='2'%20width='1'%20height='1'%20fill='%23FFCDD2'/%3E%0A%20%20%3Crect%20x='21'%20y='2'%20width='1'%20height='1'%20fill='%23FFCDD2'/%3E%0A%20%20%3Crect%20x='22'%20y='2'%20width='1'%20height='1'%20fill='%23FFCDD2'/%3E%0A%20%20%3Crect%20x='19'%20y='3'%20width='1'%20height='1'%20fill='%23FFCDD2'/%3E%0A%20%20%3Crect%20x='20'%20y='3'%20width='1'%20height='1'%20fill='%23FFCDD2'/%3E%0A%20%20%3Crect%20x='21'%20y='3'%20width='1'%20height='1'%20fill='%23FFCDD2'/%3E%0A%0A%3C!--%20Ferrule%20(Rows%204%E2%80%935)%20--%3E%0A%20%20%3Crect%20x='18'%20y='4'%20width='1'%20height='1'%20fill='%23B0BEC5'/%3E%0A%20%20%3Crect%20x='19'%20y='4'%20width='1'%20height='1'%20fill='%23B0BEC5'/%3E%0A%20%20%3Crect%20x='20'%20y='4'%20width='1'%20height='1'%20fill='%23B0BEC5'/%3E%0A%20%20%3Crect%20x='17'%20y='5'%20width='1'%20height='1'%20fill='%23B0BEC5'/%3E%0A%20%20%3Crect%20x='18'%20y='5'%20width='1'%20height='1'%20fill='%23B0BEC5'/%3E%0A%20%20%3Crect%20x='19'%20y='5'%20width='1'%20height='1'%20fill='%23B0BEC5'/%3E%0A%0A%3C!--%20Body%20(Rows%206%E2%80%9321)%20--%3E%0A%20%20%3Crect%20x='16'%20y='6'%20width='1'%20height='1'%20fill='%23FFEB3B'/%3E%0A%20%20%3Crect%20x='17'%20y='6'%20width='1'%20height='1'%20fill='%23FFEB3B'/%3E%0A%20%20%3Crect%20x='18'%20y='6'%20width='1'%20height='1'%20fill='%23FFEB3B'/%3E%0A%20%20%3Crect%20x='15'%20y='7'%20width='1'%20height='1'%20fill='%23FFEB3B'/%3E%0A%20%20%3Crect%20x='16'%20y='7'%20width='1'%20height='1'%20fill='%23FFEB3B'/%3E%0A%20%20%3Crect%20x='17'%20y='7'%20width='1'%20height='1'%20fill='%23FFEB3B'/%3E%0A%20%20%3Crect%20x='14'%20y='8'%20width='1'%20height='1'%20fill='%23FFEB3B'/%3E%0A%20%20%3Crect%20x='15'%20y='8'%20width='1'%20height='1'%20fill='%23FFEB3B'/%3E%0A%20%20%3Crect%20x='16'%20y='8'%20width='1'%20height='1'%20fill='%23FFEB3B'/%3E%0A%20%20%3Crect%20x='13'%20y='9'%20width='1'%20height='1'%20fill='%23FFEB3B'/%3E%0A%20%20%3Crect%20x='14'%20y='9'%20width='1'%20height='1'%20fill='%23FFEB3B'/%3E%0A%20%20%3Crect%20x='15'%20y='9'%20width='1'%20height='1'%20fill='%23FFEB3B'/%3E%0A%20%20%3Crect%20x='12'%20y='10'%20width='1'%20height='1'%20fill='%23FFEB3B'/%3E%0A%20%20%3Crect%20x='13'%20y='10'%20width='1'%20height='1'%20fill='%23FFEB3B'/%3E%0A%20%20%3Crect%20x='14'%20y='10'%20width='1'%20height='1'%20fill='%23FFEB3B'/%3E%0A%20%20%3Crect%20x='11'%20y='11'%20width='1'%20height='1'%20fill='%23FFEB3B'/%3E%0A%20%20%3Crect%20x='12'%20y='11'%20width='1'%20height='1'%20fill='%23FFEB3B'/%3E%0A%20%20%3Crect%20x='13'%20y='11'%20width='1'%20height='1'%20fill='%23FFEB3B'/%3E%0A%20%20%3Crect%20x='10'%20y='12'%20width='1'%20height='1'%20fill='%23FFEB3B'/%3E%0A%20%20%3Crect%20x='11'%20y='12'%20width='1'%20height='1'%20fill='%23FFEB3B'/%3E%0A%20%20%3Crect%20x='12'%20y='12'%20width='1'%20height='1'%20fill='%23FFEB3B'/%3E%0A%20%20%3Crect%20x='9'%20y='13'%20width='1'%20height='1'%20fill='%23FFEB3B'/%3E%0A%20%20%3Crect%20x='10'%20y='13'%20width='1'%20height='1'%20fill='%23FFEB3B'/%3E%0A%20%20%3Crect%20x='11'%20y='13'%20width='1'%20height='1'%20fill='%23FFEB3B'/%3E%0A%20%20%3Crect%20x='8'%20y='14'%20width='1'%20height='1'%20fill='%23FFEB3B'/%3E%0A%20%20%3Crect%20x='9'%20y='14'%20width='1'%20height='1'%20fill='%23FFEB3B'/%3E%0A%20%20%3Crect%20x='10'%20y='14'%20width='1'%20height='1'%20fill='%23FFEB3B'/%3E%0A%20%20%3Crect%20x='7'%20y='15'%20width='1'%20height='1'%20fill='%23FFEB3B'/%3E%0A%20%20%3Crect%20x='8'%20y='15'%20width='1'%20height='1'%20fill='%23FFEB3B'/%3E%0A%20%20%3Crect%20x='9'%20y='15'%20width='1'%20height='1'%20fill='%23FFEB3B'/%3E%0A%20%20%3Crect%20x='6'%20y='16'%20width='1'%20height='1'%20fill='%23FFEB3B'/%3E%0A%20%20%3Crect%20x='7'%20y='16'%20width='1'%20height='1'%20fill='%23FFEB3B'/%3E%0A%20%20%3Crect%20x='8'%20y='16'%20width='1'%20height='1'%20fill='%23FFEB3B'/%3E%0A%20%20%3Crect%20x='5'%20y='17'%20width='1'%20height='1'%20fill='%23FFEB3B'/%3E%0A%20%20%3Crect%20x='6'%20y='17'%20width='1'%20height='1'%20fill='%23FFEB3B'/%3E%0A%20%20%3Crect%20x='7'%20y='17'%20width='1'%20height='1'%20fill='%23FFEB3B'/%3E%0A%20%20%3Crect%20x='4'%20y='18'%20width='1'%20height='1'%20fill='%23FFEB3B'/%3E%0A%20%20%3Crect%20x='5'%20y='18'%20width='1'%20height='1'%20fill='%23FFEB3B'/%3E%0A%20%20%3Crect%20x='6'%20y='18'%20width='1'%20height='1'%20fill='%23FFEB3B'/%3E%0A%20%20%3Crect%20x='3'%20y='19'%20width='1'%20height='1'%20fill='%23FFEB3B'/%3E%0A%20%20%3Crect%20x='4'%20y='19'%20width='1'%20height='1'%20fill='%23FFEB3B'/%3E%0A%20%20%3Crect%20x='5'%20y='19'%20width='1'%20height='1'%20fill='%23FFEB3B'/%3E%0A%20%20%3Crect%20x='2'%20y='20'%20width='1'%20height='1'%20fill='%23FFEB3B'/%3E%0A%20%20%3Crect%20x='3'%20y='20'%20width='1'%20height='1'%20fill='%23FFEB3B'/%3E%0A%20%20%3Crect%20x='4'%20y='20'%20width='1'%20height='1'%20fill='%23FFEB3B'/%3E%0A%20%20%3Crect%20x='1'%20y='21'%20width='1'%20height='1'%20fill='%23FFEB3B'/%3E%0A%20%20%3Crect%20x='2'%20y='21'%20width='1'%20height='1'%20fill='%23FFEB3B'/%3E%0A%20%20%3Crect%20x='3'%20y='21'%20width='1'%20height='1'%20fill='%23FFEB3B'/%3E%0A%0A%3C!--%20Tip%20(Bottom%202%20rows)%20--%3E%0A%20%20%3Crect%20x='0'%20y='22'%20width='1'%20height='1'%20fill='%23424242'/%3E%0A%20%20%3Crect%20x='1'%20y='22'%20width='1'%20height='1'%20fill='%23424242'/%3E%0A%20%20%3Crect%20x='2'%20y='22'%20width='1'%20height='1'%20fill='%23424242'/%3E%0A%20%20%3Crect%20x='0'%20y='23'%20width='1'%20height='1'%20fill='%23424242'/%3E%0A%20%20%3Crect%20x='1'%20y='23'%20width='1'%20height='1'%20fill='%23424242'/%3E%0A%3C/g%3E%3C/svg%3E") 0 46, auto;
+            background: #b99566;
+            padding: 10px;
+            border-radius: 15px;
+            width: 40%;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            word-wrap: break-word;
+            white-space: pre-wrap;
+        }
+        #displayText {
+            font-size: 12px;
+            white-space: pre-wrap;
+        }
+        #hiddenInput {
+            position: absolute;
+            opacity: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" onclick="focusInput()">
+        <p id="displayText"></p>
+        <input type="text" id="hiddenInput" autofocus oninput="updateText()">
+    </div>
+
+    <script>
+        const preExistingText = [
+            "Dear Diary, <br> No, no, that just sounds wrong. I am not very experienced in this, or maybe I am. The worst effect from the Darkness isn't the memory loss, its the hobby-loss. The hobbies I pick up, the skills I learn, they still remain in my head, but I do not know how to do them anymore. It is almost like they are picking at me, laughing at the fact that I will never get good at anything. They stay around in my mind, con-constant-constantly reminding me of the things I have lost. I have lost everything to the Darkness, words slip off my tounge, memories become distant ripples in the ocean, and, although I never admitted it, I feel like I lost a life. Not the life I am currenly living, the Darkness is slowly taking that too, but I feel as though I have lived another life, in another place. Sometimes, I feel despair at the-this Labyrinth, and I convince myself that the fact I could feel despair at a place I have always been in would mean I have seen something else. Something better. Those thoughts are all lies, anyways, I just try tricking my mind into imagining a better place. But of course, there is nothing other than this maze. Except, sometimes I feel a work-word keep nagging at my head, waking me up in the morning and greeting me as I sleep in the night. I have never been able to get to this word, but I feel it loom-looming ever closer. The word just seems like a jumble of letters, but a bad one. A dangerous one, that is engraved in my mind forever. '",
+            { type: "link", html: "<a href='https://example.com'>A</a>" },
+            ""
+        ];
+        let index = 0;
+        let displayContent = "";
+        let textPart = 0;
+
+        function updateText() {
+            if (textPart < preExistingText.length) {
+                let currentPart = preExistingText[textPart];
+                if (typeof currentPart === "string") {
+                    if (index < currentPart.length) {
+                        displayContent += currentPart[index];
+                        document.getElementById("displayText").innerHTML = displayContent;
+                        index++;
+                    } else {
+                        index = 0;
+                        textPart++;
+                    }
+                } else if (currentPart.type === "link") {
+                    displayContent += currentPart.html;
+                    document.getElementById("displayText").innerHTML = displayContent;
+                    textPart++;
+                }
+            }
+        }
+
+        function focusInput() {
+            document.getElementById("hiddenInput").focus();
+        }
+    </script>
+</body>
+</html>
+</html>
